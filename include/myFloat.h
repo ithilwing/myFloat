@@ -7,45 +7,39 @@ const double EPS = 1E-9;
 class myFloat
 {
     public:
-        myFloat() {} //
-        myFloat(const float& new_float); //
+        myFloat() {}
+        myFloat(const float& new_float);
 
         myFloat& operator= (const myFloat& another);
-;
-        float getValue() const; //
-        void setValue(const myFloat& another); //
-        void setValue(const float& another); //
 
-        myFloat operator+ () const; //
-        myFloat operator- () const; //
+        float getValue() const;
+        void setValue(const myFloat& another);
+        void setValue(const float& another);
 
-        myFloat operator += (const myFloat& another); //
-        myFloat operator -= (const myFloat& another); //
-        myFloat operator *= (const myFloat& another); //
-        myFloat operator /= (const myFloat& another); //
+        myFloat operator+ () const;
+        myFloat operator- () const;
 
-        bool operator== (const myFloat& another) const; //
-        bool operator!= (const myFloat& another) const; //
+        myFloat operator += (const myFloat& another);
+        myFloat operator -= (const myFloat& another);
+        myFloat operator *= (const myFloat& another);
+        myFloat operator /= (const myFloat& another);
+
+        bool operator== (const myFloat& another) const;
+        bool operator!= (const myFloat& another) const;
 
         bool operator> (const myFloat& another) const;
         bool operator>= (const myFloat& another) const;
         bool operator< (const myFloat& another) const;
         bool operator<= (const myFloat& another) const;
 
-
-    protected:
-
     private:
         float value;
 };
 
-myFloat operator+ (const myFloat& a, const myFloat& b); //
-
-myFloat operator- (const myFloat& a, const myFloat& b); //
-
-myFloat operator* (const myFloat& a, const myFloat& b); //
-
-myFloat operator/ (const myFloat& a, const myFloat& b); //
+myFloat operator+ (const myFloat& a, const myFloat& b);
+myFloat operator- (const myFloat& a, const myFloat& b);
+myFloat operator* (const myFloat& a, const myFloat& b);
+myFloat operator/ (const myFloat& a, const myFloat& b);
 
 
 myFloat::myFloat(const float& new_float) {
